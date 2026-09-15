@@ -1,17 +1,24 @@
-let pay = document.getElementById("salary").value
-let extra = document.getElementById("other").value
-let food = document.getElementById("food").value
-let house = document.getElementById("house").value
-let car = document.getElementById("car").value
-let entertainment = document.getElementById("entertainment").value
-let electricity = document.getElementById("electricity").value
-let loan = document.getElementById("loan").value
-let travel = document.getElementById("travel").value
-let kids = document.getElementById("kids").value
-let more = document.getElementById("other").value
+const showleft = document.getElementById("showleftover")
+let pay = 0
+let extra = 0
+let food = 0
+let house = 0
+let car = 0
+let entertainment = 0
+let electricity = 0
+let loan = 0
+let travel = 0
+let kids = 0
+let more = 0
 let income = 0
 let expense = 0
 more = 0
+let leftovers = 0
+
+
+
+
+
 
 function showincome(){
     pay = document.getElementById("salary").value
@@ -32,4 +39,9 @@ function expences(){
     expense = parseInt(food) + parseInt(house) + parseInt(car) + parseInt(entertainment) + parseInt(electricity) + parseInt(loan) + parseInt(travel) + parseInt(kids) + parseInt(more)
     document.getElementById("showexpenses").textContent = "total expenses: " + expense
     console.log(expense)
+    leftover()
+}
+function leftover(){
+    leftovers = income - expense
+    showleft.textContent = leftovers 
 }
