@@ -11,7 +11,7 @@ let kids = document.getElementById("kids").value
 let more = document.getElementById("other").value
 let income = 0
 let expense = 0
-
+more = 0
 
 function showincome(){
     pay = document.getElementById("salary").value
@@ -28,7 +28,7 @@ function expences(){
     loan = document.getElementById("loan").value
     travel = document.getElementById("travel").value
     kids = document.getElementById("kids").value
-    more = document.getElementById("other").value
+    more = document.getElementById("more").value
     expense = parseInt(food) + parseInt(house) + parseInt(car) + parseInt(entertainment) + parseInt(electricity) + parseInt(loan) + parseInt(travel) + parseInt(kids) + parseInt(more)
     document.getElementById("showexpenses").textContent = "total expenses: " + expense
     console.log(expense)
