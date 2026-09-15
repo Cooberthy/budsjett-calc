@@ -5,3 +5,7 @@ header{
 #title{
     font-size: 50px;
 }
+#colum{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

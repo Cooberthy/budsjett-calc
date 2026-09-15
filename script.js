@@ -2,5 +2,5 @@ let pay = document.getElementById("salary").value
 
 function funk(){
     pay = document.getElementById("salary").value
-    document.getElementById("funds").textContent = pay
+    document.getElementById("showfunds").textContent = pay
 }
