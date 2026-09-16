@@ -25,6 +25,7 @@ function showincome(){
     extra = document.getElementById("other").value
     income = parseInt(extra) + parseInt(pay)
     document.getElementById("showfunds").textContent = "total income: " + income
+    leftover()
 }
 function expences(){
     food = document.getElementById("food").value
@@ -38,10 +39,15 @@ function expences(){
     more = document.getElementById("more").value
     expense = parseInt(food) + parseInt(house) + parseInt(car) + parseInt(entertainment) + parseInt(electricity) + parseInt(loan) + parseInt(travel) + parseInt(kids) + parseInt(more)
     document.getElementById("showexpenses").textContent = "total expenses: " + expense
-    console.log(expense)
     leftover()
 }
 function leftover(){
     leftovers = income - expense
-    showleft.textContent = leftovers 
+    showleft.textContent = leftovers
+    if(leftovers >= 0){
+        showleft.style.color = "green"
+    }else{
+        showleft.style.color = "red"
+        console.log("iunno")
+    }
 }
