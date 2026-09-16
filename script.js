@@ -1,4 +1,4 @@
-const showleft = document.getElementById("showleftover") 
+const showleft = document.getElementById("showleftover")
 let pay = 0
 let extra = 0
 let food = 0
@@ -12,9 +12,8 @@ let kids = 0
 let more = 0
 let income = 0
 let expense = 0
-more = 0
 let leftovers = 0
-let money = localStorage.getItem("betalt", pay.value)
+let money = localStorage.getItem("betalt")
 
 
 function showincome(){
