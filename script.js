@@ -1,4 +1,4 @@
-const showleft = document.getElementById("showleftover")
+const showleft = document.getElementById("showleftover") 
 let pay = 0
 let extra = 0
 let food = 0
@@ -14,14 +14,13 @@ let income = 0
 let expense = 0
 more = 0
 let leftovers = 0
-
-
-
-
+let money = localStorage.getItem("betalt", pay.value)
 
 
 function showincome(){
     pay = document.getElementById("salary").value
+    localStorage.setItem("betalt", pay.value)
+    document.getElementById("salary").textContent = money
     extra = document.getElementById("other").value
     income = parseInt(extra) + parseInt(pay)
     document.getElementById("showfunds").textContent = "total income: " + income
@@ -43,11 +42,10 @@ function expences(){
 }
 function leftover(){
     leftovers = income - expense
-    showleft.textContent = leftovers
+    showleft.textContent = "money left: " + leftovers
     if(leftovers >= 0){
         showleft.style.color = "green"
     }else{
         showleft.style.color = "red"
-        console.log("iunno")
     }
 }
