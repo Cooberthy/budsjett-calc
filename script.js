@@ -22,7 +22,7 @@ function showincome(){
     document.getElementById("salary").textContent = money
     extra = document.getElementById("other").value
     income = parseInt(extra) + parseInt(pay)
-    document.getElementById("showfunds").textContent = "total income: " + income
+    document.getElementById("showfunds").textContent = "Monthly Income: " + income
     leftover()
 }
 function expences(){
@@ -36,7 +36,7 @@ function expences(){
     kids = document.getElementById("kids").value
     more = document.getElementById("more").value
     expense = parseInt(food) + parseInt(house) + parseInt(car) + parseInt(entertainment) + parseInt(electricity) + parseInt(loan) + parseInt(travel) + parseInt(kids) + parseInt(more)
-    document.getElementById("showexpenses").textContent = "total expenses: " + expense
+    document.getElementById("showexpenses").textContent = "Monthly Expenses: " + expense
     leftover()
 }
 function leftover(){
