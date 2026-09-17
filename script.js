@@ -24,9 +24,18 @@ let income = 0
 let expense = 0
 let leftovers = 0
 let money = localStorage.getItem("betalt")
+let ekstra = localStorage.getItem("ekstra")
+let mat = localStorage.getItem("mat")
+let hus = localStorage.getItem("hus")
+let bil = localStorage.getItem("bil")
+let moro = localStorage.getItem("moro")
+let strøm = localStorage.getItem("strøm")
+let lan = localStorage.getItem("lan")
+let reise = localStorage.getItem("reise")
+let barn = localStorage.getItem("barn")
+let mer = localStorage.getItem("mer")
 
 
-console.log("yes")
 salaryid.value = money
 
 function showincome(){
