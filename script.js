@@ -1,4 +1,14 @@
+const salaryid = document.getElementById("salary")
+const extraid = document.getElementById("extra")
 const showleft = document.getElementById("showleftover")
+const foodid = document.getElementById("food")
+const houseid = document.getElementById("house")
+const carid = document.getElementById("car")
+const entertainmentid = document.getElementById("entertainment")
+const electricityid = document.getElementById("electricity")
+const loanid = document.getElementById("loan")
+const kidsid = document.getElementById("kids")
+const moreid = document.getElementById("more")
 let pay = 0
 let extra = 0
 let food = 0
@@ -16,13 +26,16 @@ let leftovers = 0
 let money = localStorage.getItem("betalt")
 
 
+console.log("yes")
+salaryid.value = money
+
 function showincome(){
+    localStorage.setItem("betalt", null)
     pay = document.getElementById("salary").value
-    localStorage.setItem("betalt", pay.value)
-    document.getElementById("salary").textContent = money
+    localStorage.setItem("betalt", pay)
     extra = document.getElementById("other").value
     income = parseInt(extra) + parseInt(pay)
-    document.getElementById("showfunds").textContent = "Monthly Income: " + income
+    document.getElementById("showfunds").textContent = "Monthly Income: " + income 
     leftover()
 }
 function expences(){
