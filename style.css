@@ -7,8 +7,11 @@ header{
 }
 #colum{
     text-align: center;
-}
+}   
 
 input{
     margin: 5px;
+}
+p{
+    display: inline;
 }
