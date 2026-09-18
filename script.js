@@ -35,19 +35,22 @@ let lan = localStorage.getItem("lan")
 let reise = localStorage.getItem("reise")
 let barn = localStorage.getItem("barn")
 let mer = localStorage.getItem("mer")
+window.addEventListener("load", (event) => {
+    salaryid.value = money
+    extraid.value = ekstra
+    foodid.value = mat
+    houseid.value = hus
+    carid.value = bil
+    entertainmentid.value = moro
+    electricityid.value = strøm
+    loanid.value = lan
+    travelid.value = reise
+    kidsid.value = barn
+    moreid.value = mer
+});
 
 
-salaryid.value = money
-extraid.value = ekstra
-foodid.value = mat
-houseid.value = hus
-carid.value = bil
-entertainmentid.value = moro
-electricityid.value = strøm
-loanid.value = lan
-travelid.value = reise
-kidsid.value = barn
-moreid.value = mer
+
 
 
 function showincome(){
