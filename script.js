@@ -1,5 +1,5 @@
 const salaryid = document.getElementById("salary")
-const extraid = document.getElementById("extra")
+const extraid = document.getElementById("other")
 const showleft = document.getElementById("showleftover")
 const foodid = document.getElementById("food")
 const houseid = document.getElementById("house")
@@ -7,6 +7,7 @@ const carid = document.getElementById("car")
 const entertainmentid = document.getElementById("entertainment")
 const electricityid = document.getElementById("electricity")
 const loanid = document.getElementById("loan")
+const travelid = document.getElementById("travel")
 const kidsid = document.getElementById("kids")
 const moreid = document.getElementById("more")
 let pay = 0
@@ -37,12 +38,23 @@ let mer = localStorage.getItem("mer")
 
 
 salaryid.value = money
+extraid.value = ekstra
+foodid.value = mat
+houseid.value = hus
+carid.value = bil
+entertainmentid.value = moro
+electricityid.value = strøm
+loanid.value = lan
+travelid.value = reise
+kidsid.value = barn
+moreid.value = mer
+
 
 function showincome(){
-    localStorage.setItem("betalt", null)
     pay = document.getElementById("salary").value
     localStorage.setItem("betalt", pay)
     extra = document.getElementById("other").value
+    localStorage.setItem("ekstra", extra)
     income = parseInt(extra) + parseInt(pay)
     document.getElementById("showfunds").textContent = "Monthly Income: " + income 
     leftover()
@@ -57,6 +69,15 @@ function expences(){
     travel = document.getElementById("travel").value
     kids = document.getElementById("kids").value
     more = document.getElementById("more").value
+    localStorage.setItem("mat", food)
+    localStorage.setItem("hus", house)
+    localStorage.setItem("bil", car)
+    localStorage.setItem("moro", entertainment)
+    localStorage.setItem("strøm", electricity)
+    localStorage.setItem("lan", loan)
+    localStorage.setItem("reise", travel)
+    localStorage.setItem("barn", kids)
+    localStorage.setItem("mer", more)
     expense = parseInt(food) + parseInt(house) + parseInt(car) + parseInt(entertainment) + parseInt(electricity) + parseInt(loan) + parseInt(travel) + parseInt(kids) + parseInt(more)
     document.getElementById("showexpenses").textContent = "Monthly Expenses: " + expense
     leftover()
